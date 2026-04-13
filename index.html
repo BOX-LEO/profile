@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boxiang Zhang</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+  <main class="container">
+    <aside class="sidebar">
+      <img src="static/img/avatar.jpg" alt="Boxiang Zhang" class="photo" />
+      <h1 class="name">Boxiang Zhang</h1>
+      <p class="title">PhD Candidate, Purdue University</p>
+
+      <p class="location"><i class="fa-solid fa-location-dot"></i> West Lafayette, IN</p>
+
+      <ul class="icon-links">
+        <!-- <li><a href="mailto:zhan4145@purdue.edu" aria-label="Email" title="Email"><i class="fa-solid fa-envelope"></i></a></li> -->
+        <li><a href="https://scholar.google.com/citations?user=hgQiMmgAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a></li>
+        <li><a href="https://github.com/BOX-LEO" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/boxiang-zhang-369086201/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+        <!-- <li><a href="https://huggingface.co/YOUR_USERNAME" target="_blank" rel="noopener" aria-label="Hugging Face" title="Hugging Face">&#129303;</a></li> -->
+        <li><a href="static/CV.pdf" target="_blank" rel="noopener" aria-label="CV" title="CV"><i class="fa-solid fa-file-lines"></i></a></li>
+      </ul>
+    </aside>
+
+    <section class="content">
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          Boxiang Zhang is a Ph.D. candidate in Machine Learning and Data Science at Purdue University. His research focuses on efficient and deployable AI systems, especially transformer compression and post-training optimization .
+        <p>
+        <p>
+          He develops structured pruning methods for Vision Transformers, including one-shot approaches that preserve representations without retraining. His work shows strong efficiency gains with minimal accuracy loss, enabling practical deployment of large models .
+        <p>
+        <p>
+          His experience spans computer vision, anomaly detection, and multi-modal learning, with real-world systems such as industrial defect detection achieving over 95% AUROC. He aims to bridge advanced AI research with real-world impact through efficient model design</p>
+        <p>
+        </section>
+
+      <!-- <section id="interests">
+        <h2>Research Interests</h2>
+        <ul>
+          <li>Interest area one</li>
+          <li>Interest area two</li>
+          <li>Interest area three</li>
+        </ul>
+      </section> -->
+
+      <section id="education">
+        <h2>Education</h2>
+        <ul class="timeline">
+          <li>
+            <strong>Ph.D. in SOET</strong>, Purdue University, West Lafayette, IN
+            <span class="date">Aug 2022 – Aug 2026 (Expected)</span>
+            <p>Machine Learning and Data Science</p>
+          </li>
+          <li>
+            <strong>M.S. in ECE (with Honors)</strong>, University of Southern California, Los Angeles, CA
+            <span class="date">Aug 2020 – May 2022</span>
+            <p>Machine Learning and Data Science</p>
+          </li>
+          <li>
+            <strong>B.E. in EE</strong>, Huazhong University of Science and Technology
+            <span class="date">Sep 2019 – Jun 2020</span>
+            <p>Optical and Electronic Information</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+        <ul class="pub-list" id="pub-list">
+          <li><em>Loading publications…</em></li>
+        </ul>
+      </section>
+
+      <!-- <section id="projects">
+        <h2>Projects</h2>
+        <ul class="pub-list">
+          <li>
+            <p class="pub-title">Project Name</p>
+            <p>Short description of what the project does and why it matters.</p>
+            <p class="pub-links">
+              <a href="#">Code</a> ·
+              <a href="#">Demo</a> ·
+              <a href="#">Hugging Face</a>
+            </p>
+          </li>
+          <li>
+            <p class="pub-title">Another Project</p>
+            <p>One-sentence summary.</p>
+            <p class="pub-links">
+              <a href="#">Code</a>
+            </p>
+          </li>
+        </ul>
+      </section> -->
+
+      <footer>
+        <p>&copy; <span id="year"></span> Boxiang Zhang</p>
+      </footer>
+    </section>
+  </main>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const escapeHTML = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[c]));
+
+    fetch('publications.json')
+      .then((r) => r.ok ? r.json() : Promise.reject(r.status))
+      .then((pubs) => {
+        const list = document.getElementById('pub-list');
+        if (!pubs.length) {
+          list.innerHTML = '<li><em>No publications yet.</em></li>';
+          return;
+        }
+        list.innerHTML = pubs.map((p) => {
+          const venueYear = [p.venue, p.year].filter(Boolean).join(', ');
+          const linkParts = [];
+          if (p.url) linkParts.push(`<a href="${escapeHTML(p.url)}" target="_blank" rel="noopener">Paper</a>`);
+          if (p.code) linkParts.push(`<a href="${escapeHTML(p.code)}" target="_blank" rel="noopener">Code</a>`);
+          if (p.huggingface) linkParts.push(`<a href="${escapeHTML(p.huggingface)}" target="_blank" rel="noopener">Hugging Face</a>`);
+          const links = linkParts.length ? `<p class="pub-links">${linkParts.join(' · ')}</p>` : '';
+          const img = p.image
+            ? `<img class="pub-image" src="${escapeHTML(p.image)}" alt="${escapeHTML(p.title)}" />`
+            : '';
+          const clickable = p.projectpage
+            ? ` class="pub-clickable" data-href="${escapeHTML(p.projectpage)}" tabindex="0" role="link"`
+            : '';
+          return `
+            <li${clickable}>
+              <p class="pub-title">${escapeHTML(p.title)}</p>
+              <p class="pub-authors">${escapeHTML(p.authors)}</p>
+              ${venueYear ? `<p class="pub-venue">${escapeHTML(venueYear)}</p>` : ''}
+              ${img}
+              ${links}
+            </li>`;
+        }).join('');
+
+        list.querySelectorAll('.pub-clickable').forEach((el) => {
+          const go = () => window.open(el.dataset.href, '_blank', 'noopener');
+          el.addEventListener('click', (e) => {
+            if (e.target.closest('a')) return;
+            go();
+          });
+          el.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); }
+          });
+        });
+      })
+      .catch(() => {
+        document.getElementById('pub-list').innerHTML =
+          '<li><em>Could not load publications.json.</em></li>';
+      });
+  </script>
+</body>
+</html>

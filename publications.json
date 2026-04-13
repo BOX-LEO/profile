@@ -1,0 +1,52 @@
+[
+  {
+    "title": "CORP: Closed-Form One-shot Representation-Preserving Structured Pruning for Vision Transformers",
+    "authors": "Boxiang Zhang and Baijian Yang",
+    "venue": "arXiv preprint arXiv:2602.05243",
+    "year": 2026,
+    "abstract": "Vision Transformers achieve strong accuracy but incur high compute and memory cost. Structured pruning can reduce inference cost, but most methods rely on retraining or multi-stage optimization. These requirements limit post-training deployment. We propose \\textbf{CORP}, a closed-form one-shot structured pruning framework for Vision Transformers. CORP removes entire MLP hidden dimensions and attention substructures without labels, gradients, or fine-tuning. It operates under strict post-training constraints using only a small unlabeled calibration set. CORP formulates structured pruning as a representation recovery problem. It models removed activations and attention logits as affine functions of retained components and derives closed-form ridge regression solutions that fold compensation into model weights. This minimizes expected representation error under the calibration distribution. Experiments on ImageNet with DeiT models show strong redundancy in MLP and attention representations. Without compensation, one-shot structured pruning causes severe accuracy degradation. With CORP, models preserve accuracy under aggressive sparsity. On DeiT-Huge, CORP retains 82.8\\% Top-1 accuracy after pruning 50\\% of both MLP and attention structures. CORP completes pruning in under 20 minutes on a single GPU and delivers substantial real-world efficiency gains.",
+    "url": "https://arxiv.org/abs/2602.05243",
+    "citations": 0,
+    "image": "static/img/pruning_illustration.png",
+    "projectpage": ""
+  },
+  {
+    "title": "Cable Tension Optimization for a Planar CDPR Through Anchor Reconfiguration",
+    "authors": "Lei Jin and Boxiang Zhang and Ahmad AlAttar and Maitha AlQaydi and Mohamed Abduljawad and Tarek Taha and Yahya Mohammed and Xiaoming Wang and Dongming Gan",
+    "venue": "2024 6th International Conference on Reconfigurable Mechanisms and Robots (ReMAR)",
+    "year": 2024,
+    "abstract": "This paper introduced a novel approach in Cable-Driven Parallel Robots (CDPRs) on planar surface applications. It focuses on challenges in redundancy, reconfiguration, and payload capacity. The research presents innovative solutions for cable tension optimization and anchor reconfiguration, aiming to resolve redundancy issues in multi-anchor systems. It combines theoretical models with experimental data from extensive laboratory experiments, employing linear programming to optimize cable-driven redundant parallel manipulators. This approach underlines the paper's contribution to enhancing the operational efficiency and precision of CDPRs, ensuring practical applicability of the findings.",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10617547/",
+    "citations": 1
+  },
+  {
+    "title": "PatchFlow: Leveraging a Flow-Based Model with Patch Features",
+    "authors": "Boxiang Zhang and Baijian Yang and Xiaoming Wang and Corey Vian",
+    "venue": "3rd Annual AAAI Workshop on AI to Accelerate Science and Engineering (AI2ASE)",
+    "year": 2024,
+    "abstract": "Die casting plays a crucial role across various industries due to its ability to craft intricate shapes with high precision and smooth surfaces. However, surface defects remain a major issue that impedes die casting quality control. Recently, computer vision techniques have been explored to automate and improve defect detection. In this work, we combine local neighbor-aware patch features with a normalizing flow model and bridge the gap between the generic pretrained feature extractor and industrial product images by introducing an adapter module to increase the efficiency and accuracy of automated anomaly detection. Compared to state-of-the-art methods, our approach reduces the error rate by 20\\% on the MVTec AD dataset, achieving an image-level AUROC of 99.28\\%. Our approach has also enhanced performance on the VisA dataset , achieving an image-level AUROC of 96.48\\%. Compared to the state-of-the-art models, this represents a 28.2\\% reduction in error. Additionally, experiments on a proprietary die casting dataset yield an accuracy of 95.77\\% for anomaly detection, without requiring any anomalous samples for training. Our method illustrates the potential of leveraging computer vision and deep learning techniques to advance inspection capabilities for the die casting industry",
+    "url": "https://arxiv.org/abs/2602.05238",
+    "citations": 1,
+    "code": "https://github.com/BOX-LEO/PatchFlow",
+    "image": "static/img/model_overview.png"
+  },
+  {
+    "title": "Kinetostatic Modeling and Cable Tension Optimization of Cable-Driven Parallel Robots on Cylindrical Surfaces",
+    "authors": "Lei Jin and Boxiang Zhang and Maitha Alqaydi and Xiaoming Wang and Tarek Taha and Dongming Gan",
+    "venue": "International Design Engineering Technical Conferences and Computers and Information in Engineering Conference",
+    "year": 2023,
+    "abstract": "This paper presents a kineto-static model for cable-driven parallel robots (CDPRs) that addresses the challenges of designing and optimizing CDPRs for cleaning and manufacturing tasks on curved surfaces. CDPRs are known for their lightweight design and scalable workspace, making them a promising solution for large part cleaning and manufacturing. However, the curvature of the cables introduces complexities in the moving platform configuration that must be addressed. The proposed model provides a solution for finding the moving platform position with a given set of cable lengths, as well as determining the cable tension force direction and magnitude for a 2-anchor-point cylindrical CDPR. Furthermore, an optimization method for multiple anchor cylindrical CDPRs is formulated using planar force balance equations and linear programming. The method defines corresponding anchor points that counter …",
+    "url": "https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2023/87363/1170756",
+    "citations": 4
+  },
+  {
+    "title": "A.I. Vision System for Automated Casting Quality Inspection (Best paper award)",
+    "authors": "Corey. Vian Boxiang Zhang and Xiaoming. Wang and Baijian. Yang",
+    "venue": "NADCA Conference and Tabletop",
+    "year": 2023,
+    "abstract": "",
+    "url": "",
+    "citations": 0,
+    "projectpage": ""
+  }
+]
