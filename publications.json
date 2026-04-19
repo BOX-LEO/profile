@@ -8,17 +8,10 @@
     "url": "https://arxiv.org/abs/2602.05243",
     "citations": 0,
     "image": "static/img/pruning_illustration.png",
-    "code": "https://github.com/BOX-LEO/CORP"
+    "code": "https://github.com/BOX-LEO/CORP",
+    "projectpage": "https://box-leo.github.io/CORP/"
   },
-  {
-    "title": "Cable Tension Optimization for a Planar CDPR Through Anchor Reconfiguration",
-    "authors": "Lei Jin and Boxiang Zhang and Ahmad AlAttar and Maitha AlQaydi and Mohamed Abduljawad and Tarek Taha and Yahya Mohammed and Xiaoming Wang and Dongming Gan",
-    "venue": "2024 6th International Conference on Reconfigurable Mechanisms and Robots (ReMAR)",
-    "year": 2024,
-    "abstract": "This paper introduced a novel approach in Cable-Driven Parallel Robots (CDPRs) on planar surface applications. It focuses on challenges in redundancy, reconfiguration, and payload capacity. The research presents innovative solutions for cable tension optimization and anchor reconfiguration, aiming to resolve redundancy issues in multi-anchor systems. It combines theoretical models with experimental data from extensive laboratory experiments, employing linear programming to optimize cable-driven redundant parallel manipulators. This approach underlines the paper's contribution to enhancing the operational efficiency and precision of CDPRs, ensuring practical applicability of the findings.",
-    "url": "https://ieeexplore.ieee.org/abstract/document/10617547/",
-    "citations": 1
-  },
+  
   {
     "title": "PatchFlow: Leveraging a Flow-Based Model with Patch Features",
     "authors": "Boxiang Zhang and Baijian Yang and Xiaoming Wang and Corey Vian",
@@ -30,6 +23,15 @@
     "code": "https://github.com/BOX-LEO/PatchFlow",
     "image": "static/img/model_overview.png",
     "projectpage": "https://box-leo.github.io/PatchFlow/"
+  },
+  {
+    "title": "Cable Tension Optimization for a Planar CDPR Through Anchor Reconfiguration",
+    "authors": "Lei Jin and Boxiang Zhang and Ahmad AlAttar and Maitha AlQaydi and Mohamed Abduljawad and Tarek Taha and Yahya Mohammed and Xiaoming Wang and Dongming Gan",
+    "venue": "2024 6th International Conference on Reconfigurable Mechanisms and Robots (ReMAR)",
+    "year": 2024,
+    "abstract": "This paper introduced a novel approach in Cable-Driven Parallel Robots (CDPRs) on planar surface applications. It focuses on challenges in redundancy, reconfiguration, and payload capacity. The research presents innovative solutions for cable tension optimization and anchor reconfiguration, aiming to resolve redundancy issues in multi-anchor systems. It combines theoretical models with experimental data from extensive laboratory experiments, employing linear programming to optimize cable-driven redundant parallel manipulators. This approach underlines the paper's contribution to enhancing the operational efficiency and precision of CDPRs, ensuring practical applicability of the findings.",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10617547/",
+    "citations": 1
   },
   {
     "title": "Kinetostatic Modeling and Cable Tension Optimization of Cable-Driven Parallel Robots on Cylindrical Surfaces",
